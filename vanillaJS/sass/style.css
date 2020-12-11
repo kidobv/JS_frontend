@@ -1,0 +1,16 @@
+button {
+    cursor: pointer;
+    background-color: dodgerblue;
+    padding: 1rem 1rem;
+    border-radius: 5px;
+    border: 1px black;
+    font-size: 20px;
+    font-family: Roboto;
+    color: white;
+}
+
+.centered {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+}

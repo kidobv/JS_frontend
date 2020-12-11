@@ -1,0 +1,21 @@
+//mixins
+@mixin myFlexCenter($direction, $background) {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: $direction;
+    background: $background;
+}
+
+header {
+    @include myFlexCenter(column, rgb(224, 224, 193));
+    background-color: cornflowerblue;
+    height: 100vh;
+    color: $textColor;
+    button {
+        background: $primaryBtn;
+        &:hover {
+            background: rgb(255, 157, 0);
+        }
+    }
+}

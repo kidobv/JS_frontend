@@ -1,0 +1,68 @@
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 17px;
+    line-height: 1.6;
+}
+
+.button {
+    background: coral;
+    position: fixed;
+    border-radius: 5px;
+    top:50%;
+    left: 50%;
+    padding: 1em 2em;
+    color: white;
+    border: 0;
+    font-size: 17px;
+}
+
+.button:hover {
+    background: gray;
+}
+
+/* modal background class */
+
+.modal {
+    display: none;
+    position: fixed;
+    /* the higher the z index the more upfront it will be */
+    z-index: 1;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    /* enabled scrollbar if needed */
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+/* the modal content */
+
+.modal-content {
+    background-color: #f4f4f4;
+    /* how much we want it to go down 20% is the percent on the screen to go down*/
+    /* the auto is for left and right because we want it to be in the middle */
+    margin: 20% auto;
+    padding: 20px;
+    width: 60%;
+    box-shadow: 10px 10px 5px rgba(0, 0, 0, 0.2);
+    border-radius: 8px;
+    animation-name: modalopen;
+    animation-duration: 1s;
+}
+
+.closeBtn {
+    color: #cccccc;
+    float: right;
+    font-size: 30px;
+}
+
+.closeBtn:hover, .closeBtn:focus {
+    color: gray;
+    cursor: pointer;
+}
+
+@keyframes modalopen{
+    from{opacity: 0;}
+    to{opacity: 1;}
+}

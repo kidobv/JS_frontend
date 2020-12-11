@@ -1,0 +1,22 @@
+body{
+    margin: 0;
+}
+
+.container{
+    background: grey;
+    margin: 1rem;
+    padding: 1rem;
+}
+
+.draggable{
+    background-color: white;
+    font-size: 16px;
+    font-family: roboto;
+    border: 2px solid black;
+    padding: 1rem;
+    cursor: move;
+}
+
+.draggable.dragging{
+    opacity: 0.3;
+}
