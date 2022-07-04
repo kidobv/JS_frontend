@@ -1,0 +1,13 @@
+
+.container{
+	height: 30px;
+	width: 500px;
+	border: solid 4px black;
+	margin: 3px;
+}
+
+.progress{
+	background-color: green;
+	height: 30px;
+	width: 0%;
+}

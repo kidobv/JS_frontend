@@ -1,0 +1,52 @@
+#title{	
+	color: darkblue;
+	text-decoration: underline;
+	font-weight: normal;
+}
+
+.centered{
+	text-align: center;
+}
+
+#wrapper{
+	width: 400px;
+	margin: 24px auto;
+}
+
+#typeahead{
+	width: 100%;
+	padding: 10px;
+	font-size: 18px;
+	border-radius: 8px;
+	border:  2px solid darkblue;
+	outline: none;
+}
+
+#typeahead-list{
+	list-style: none;
+	width: 100%;
+	padding: 0;
+	background: lightslategray;
+	border-radius: 8px;
+	margin-top: 8px;
+	box-shadow: 0 5px 10px #4a494933;
+	max-height: 200px;
+	overflow: auto;
+}
+
+li {
+	padding: 12px;
+	font-size: 28px;
+	cursor: pointer;
+}
+
+li:not(.selected, :hover):nth-child(even){
+	background-color: gray;
+}
+li:not(.selected, :hover):nth-child(odd){
+	background-color: white;
+}
+
+li:hover, .selected{
+	background-color: lightblue;
+}

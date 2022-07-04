@@ -16,7 +16,8 @@ for(const empty of empties){
 
 //Drag functions
 function dragStart(){
-    this.className += ' hold';
+    //this.className += ' hold';
+    this.classList.add('hold')
     requestAnimationFrame(() => { this.className = 'invisible'})
     // setTimeout(() => {
     //     this.className = 'invisible';
