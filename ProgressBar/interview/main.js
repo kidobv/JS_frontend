@@ -2,7 +2,30 @@
 //The progressbar is displayed in a container with 500px width and 30px height.
 
 //Step 1: build a progress bar and make it go to 100%
+
+// const p1 = document.getElementById('progress1');
+// pAmount = 0;
+// let intervalId = setInterval(() => {
+// 	p1.style.width = `${++pAmount}%`;
+// 	if (pAmount == 100) {
+// 		clearInterval(intervalId)
+// 	}
+// }, 30)
+
 //Step 2: Add 2 more progress bar and make all go to 100% with the same interval
+
+// const p1 = document.getElementById('progress1');
+// const p2 = document.getElementById('progress2');
+// pAmount = 0;
+// let intervalId = setInterval(() => {
+// 	pAmount++;
+// 	p1.style.width = `${pAmount}%`;
+// 	p2.style.width = `${pAmount}%`;
+// 	if (pAmount == 100) {
+// 		clearInterval(intervalId)
+// 	}
+// }, 30)
+
 //Step 3: Start them at diff intervals one a 3sec, another at 5sec, and the last at 3sec
 
 // let intervalId;
@@ -13,16 +36,16 @@
 
 // for(let i=0; i<progressList.length; i++){
 // 	//set time interval
-// 	let ticks = 0;
+// 	let pAmount = 0;
 // 	intervalId = setInterval(() => tick(i), durations[i]);
-// 	intervals.set(i, {"interval" : intervalId, "ticks" : ticks});
+// 	intervals.set(i, { "interval": intervalId, "pAmount": pAmount });
 // }
 
 // function tick(index){	
-// 	let tick = intervals.get(index).ticks++
-//     progressList[index].style.width = `${tick}%`;
+// 	let pAmount = intervals.get(index).pAmount++
+// 	progressList[index].style.width = `${pAmount}%`;
 
-// 	if (tick == 100)
+// 	if (pAmount == 100)
 // 		clearInterval(intervals.get(index).interval);
 // }
 
@@ -39,10 +62,10 @@ let currIndex = 0;
 startProgress(currIndex)
 
 function tick(index){	
-	let tick = intervals.get(index).ticks++
-    progressList[index].style.width = `${tick}%`;
+	let pAmount = intervals.get(index).pAmount++
+	progressList[index].style.width = `${pAmount}%`;
 
-	if (tick == 100){
+	if (pAmount == 100){
 		clearInterval(intervals.get(index).interval);
 		if(currIndex < progressList.length)
 			startProgress(currIndex)
@@ -51,8 +74,8 @@ function tick(index){
 
 function startProgress(idx){
 	console.log("idx", idx)
-	let ticks = 0;
+	let pAmount = 0;
 	intervalId = setInterval(() => tick(idx), durations[idx]);
-	intervals.set(idx, {"interval" : intervalId, "ticks" : ticks});
+	intervals.set(idx, { "interval": intervalId, "pAmount": pAmount });
 	currIndex++;
 }

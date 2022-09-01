@@ -1,9 +1,78 @@
-.tweet {
-  border-top: 1px solid gray;
-  border-bottom: 1px solid gray;
+/* .tweet > * {
+  border: 2px solid lightblue;
+} */
+
+.tweet-container{
   display: flex;
 }
 
+.tweet {
+  display: grid;  
+  grid-template-columns: 3fr 1fr;
+  grid-template-areas:
+    "header date"
+    "text text"
+    "footer footer";
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  margin-top: 2px;
+  border-top: 1px solid gray;
+  border-bottom: 1px solid gray;
+}
+
+.tweet-header{
+  grid-area: header;
+}
+
+.tweet-text{
+  grid-area: text;
+}
+
+.tweet-footer{
+  /* grid-column-start: 1;
+  grid-column-end: 2; */
+  /* grid-column-start: span 2; */
+  grid-area: footer;
+  justify-self: right;
+}
+
+.handle, .user-details, .expand{
+  color:gray;
+}
+
 .user-details{
-  
+  display: block;
+  margin-top: 5px;
+}
+
+/* .user-info > * {
+  border: 2px solid lightblue;
+} */
+.user-info{
+  display: flex;
+  flex-flow: row wrap;
+  /* align-items: center;
+  justify-items: left;
+  grid-template-areas: 
+  "avatar name handle"
+  "avatar user-details user-details"; */
+}
+
+.name{
+  margin: 0.1rem;
+  font-weight: bold;
+}
+
+.create-date{
+  grid-area: date;
+  color:rgb(30, 120, 246);
+  justify-self: right;
+}
+
+.avatar{
+  width: 75px;
+  height: 60px;
+  background-color: powderblue;
+  padding: 0.5rem;
+  margin: 0.2rem;
+  border: 2px solid gray;
 }

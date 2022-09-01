@@ -1,0 +1,112 @@
+:root{
+    --main-background-color: rgb(17, 58, 76, 0.8);
+}
+
+
+* {
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: var(--main-background-color);
+}
+
+
+.btn {
+    position: absolute;
+    background-color: var(--main-background-color);
+    color: white;
+    font-size: 1.5rem;
+    border: 2px solid black;
+    margin-top: 2rem;
+    left: 45%;
+    border-radius: 10px;
+    padding: 0.5rem;
+}
+
+.btn:hover {
+    background-color: rgb(114, 178, 208);
+    border: 2px solid black;
+    cursor: pointer;
+}
+
+.carousel {
+    background-color: rgb(0, 0, 0, 0.8);
+    margin: auto;
+    border: 5px solid black;    
+    height: 80vh; 
+    width: 90vw;
+}
+
+.carousel-display {    
+    display: flex; 
+    justify-content: center;
+    width: 100%; 
+    height: 80%;
+}
+
+#display-img{
+    padding: 1rem;
+    height: 100%;
+}
+
+.carousel-selection{
+    display: flex;
+    justify-content: center;
+    height: 20%;    
+    overflow: auto;
+}
+
+.selection-img {
+    height: 100%;
+}
+
+.selection-img:hover {
+    opacity: 1;
+    cursor: pointer;
+}
+
+.inactive {
+    opacity: 0.4;
+}
+
+#leftBtn{
+  cursor: pointer;
+  position: absolute;
+  left: 5%;
+  top: 50%;
+  padding: 0.5rem;
+  background-color: var(--main-background-color);
+  color: white;
+  font-weight: bold;
+  font-size: 1.5rem;
+  z-index: 1;
+  opacity: 0.8;
+}
+
+.rightBtn{    
+  cursor: pointer;
+  position: absolute;
+  right: 5%;
+  top: 50%;
+  padding: 0.5rem;
+  color: white;
+  background-color: var(--main-background-color);
+  font-weight: bold;
+  font-size: 1.5rem;
+  z-index: 1;
+  opacity: 0.8;   
+}
+
+.rightBtn:hover {
+    background-color: rgb(114, 178, 208);
+    border: 2px solid black;
+    cursor: pointer;
+}
+#leftBtn:hover {
+    background-color: rgb(114, 178, 208);
+    border: 2px solid black;
+    cursor: pointer;
+}

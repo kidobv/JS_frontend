@@ -17,7 +17,6 @@
 // })
 
 
-
 function debounce(cb, wait) {
 	let timer = null;
 
@@ -30,23 +29,42 @@ function debounce(cb, wait) {
 }
 
 
-let handleScroll = (list) => {
-	let counter = document.querySelectorAll('.listItem').length; 
-	console.log(list.scrollHeight, list.clientHeight, list.scrollTop)
-	if(list.scrollHeight - list.clientHeight - list.scrollTop > 0) return
+// let handleScroll = (list) => {
+// 	let counter = document.querySelectorAll('.listItem').length; 
+// 	console.log(list.scrollHeight, list.clientHeight, list.scrollTop)
+// 	if(list.scrollHeight - list.clientHeight - list.scrollTop > 0) return
 	
+// 	let li = document.createElement('li');
+// 	counter++;
+// 	li.classList.add('listItem');      
+// 	li.textContent = `Item ${counter}`;       
+// 	list.append(li); 
+// }
+
+// // we can avoid having to pass the list to the handleScroll function if we defer the load of the script so that we can have a global variable
+// document.addEventListener('DOMContentLoaded', function(){	  
+// 	const list = document.querySelector('ul');
+
+// 	list.addEventListener('scroll', debounce(() => handleScroll(list), 70))		    
+// })
+
+ function handleScroll() {
+	let counter = document.querySelectorAll('.listItem').length;
+	console.log(this.scrollHeight, this.clientHeight, this.scrollTop)
+	if (this.scrollHeight - this.clientHeight - this.scrollTop > 0) return
+
 	let li = document.createElement('li');
 	counter++;
-	li.classList.add('listItem');      
-	li.textContent = `Item ${counter}`;       
-	list.append(li); 
+	li.classList.add('listItem');
+	li.textContent = `Item ${counter}`;
+	this.append(li);
 }
 
-// we can avoid having to pass the counter and list to the handleScroll function if we defer the load of the script so that we can have a global variable
-document.addEventListener('DOMContentLoaded', function(){	  
+// we can avoid having to pass the list to the handleScroll function if we defer the load of the script so that we can have a global variable
+document.addEventListener('DOMContentLoaded', function () {
 	const list = document.querySelector('ul');
 
-	list.addEventListener('scroll', debounce(() => handleScroll(list), 70))		    
+	list.addEventListener('scroll', debounce(handleScroll, 70))
 })
 
 
