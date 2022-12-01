@@ -1,0 +1,35 @@
+.App {
+  text-align: center;
+}
+
+.todo-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.todo-list {
+    min-width: 30%;
+    list-style: none;
+}
+
+.todo {
+    margin: 0.5rem;
+    color: black;
+    background: white;
+    font-size: 1.5rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: all 0.5s ease;
+    animation-name: modalopen;
+    animation-duration: 1s;
+}
+
+.todo li {
+    flex: 1;    
+}
+
+.todo-item {
+    padding: 0rem 0.5rem;    
+}

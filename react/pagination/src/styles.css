@@ -1,0 +1,32 @@
+.App {
+  font-family: sans-serif;
+  text-align: center;
+}
+
+.pagination {
+  display: flex;
+  flex-wrap:wrap;
+  gap: 0.5rem;
+  align-items: baseline;
+  justify-content:center;
+}
+button{
+  cursor: pointer;
+  border-radius: 2px;
+  background-color:gainsboro;
+  font-weight: bold;
+  border-color: darkslategray;
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+li {
+  padding: 0.25rem;
+  list-style: none;
+}
